@@ -1,3 +1,5 @@
+replicaCount: 1
+
 image:
   repository: aisalkyn85/manual-k8s-app
   tag: "9"
@@ -6,4 +8,9 @@ image:
 service:
   type: ClusterIP
   port: 3000
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
 
