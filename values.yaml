@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: aisalkyn85/manual-k8s-app
+  repository: aisalkyn85/manual-app
   tag: "9"
   pullPolicy: Always
 
