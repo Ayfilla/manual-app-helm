@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: aisalkyn85/manual-app
+  repository: ayfilla/manual-app
   tag: "9"
   pullPolicy: Always
 
