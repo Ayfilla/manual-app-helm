@@ -1,3 +1,5 @@
+
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -12,10 +14,11 @@ spec:
       labels:
         app: manual-app
     spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
       containers:
         - name: manual-app
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: 3000
-
